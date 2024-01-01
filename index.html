@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/all.min.css"/>
+        <link rel="stylesheet" href="css/fontawesome.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+
+        <title>registration</title>
+    </head>
+    <body>
+        <div class="container text-center my-5 " id="signin">
+            <div class="row">
+                <div class="col-md-8 offset-2 regist p-5 ">
+                    <h1>Smart Login System</h1>
+                    <input id="signInEmail" class="form-control my-3" placeholder="Enter Your Email" type="email">
+                    <input id="signInPassword" class="form-control my-3" placeholder="Enter Your Password" type="password">
+                    <p id="incorrect" class="text-danger"></p>
+                    <button class="btn btn-outline-info w-100 my-3"  onclick="login()">Login</button>
+                    <p class="text-white">Don’t have an account? 
+                        <button type="button" class="text-white btn p-0"  onclick="display('up')">Sign Up</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" container text-center my-5 d-none" id="signup"  >
+            <div class="row">
+                <div class="col-md-8 offset-2 regist p-5 ">
+                    <h1>Smart Login System</h1>
+                    <input oninput="validateErrorName()" id="signUpName" class="form-control my-3" placeholder="Enter Your Name" type="text">
+                    <input oninput="validateErrorEmail()" id="signUpEmail" class="form-control my-3" placeholder="Enter Your Email" type="email">
+                    <input oninput="validateErrorPassword()" id="signUpPassword" class="form-control my-3" placeholder="Enter Your Password" type="password">
+                    <p id="exist" class="text-white"></p>
+                    <button onclick="addmember()" class="btn btn-outline-info w-100 my-3">Sign Up</button>
+                    <p class="text-white">You have an account?  
+                        <button type="button" class="text-white btn p-0" onclick="display('in')">Sign In</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>
